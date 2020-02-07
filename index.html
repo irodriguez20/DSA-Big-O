@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DSA-Big-O</title>
+  </head>
+  <body>
+    1. a) T = O(1); b) T = O(n) 2. The Big O is O(1) because the fastest growing
+    term is n. function isEven(value) { if (value % 2 == 0) { //3 * n return
+    true; //1 * n } else return false; //1 * n } } T = (3 * n) + (1 * n) + (1 *
+    n) T = 5 * n T = A * n T = n T = O(n) 3. The Big O is O(n^2) because there
+    are two for loops and one is nested. Also, the lines of code that aren't the
+    for() statement are only O(1) and 1 * 1 is 1, causing the fastest growing
+    term to be n^2. function areYouHere(arr1, arr2) { for (let i = 0; i <
+    arr1.length; i++) { // n const el1 = arr1[i]; // O(1) for (let j = 0; j <
+    arr2.length; j++) { // n const el2 = arr2[j]; // O(1) if (el1 === el2)
+    return true; // } } return false; //O(1) } O(1) + n * ( O(1) + n * (O(1)) )
+    O(1) + n * ( O(1) + n ) n * ( O(1) + n ) + O(1) n * O(1) + n^2 + O(1) n^2 T
+    = O(n^2) ---------- T = 6 * n * (1 + 6 * n * (1 + 1)) + 1 T = 6 * n * (1 + 6
+    * n * (2)) T = 6 * n * (1 + 12 * n) T = 6 * n + 60 * n^2 T = 60 * n^2 T = B
+    * n^2 T = n^2 T = O(n^2) 4. The Big O is O(n) because the fastest growing
+    term is n. function doubleArrayValues(array) { for (let i = 0; i <
+    array.length; i++) { n array[i] *= 2; } return array; } 5. The Big O is
+    O(n^2) because the fastest growing term is n^2. function naiveSearch(array,
+    item) { for (let i = 0; i < array.length; i++) { n if (array[i] === item) {
+    n return i; O(1) } } } T = n * (n) T = O(n^2) 6.The Big O is O(n^3) because
+    it is a nested for() loop. function createPairs(arr) { for (let i = 0; i <
+    arr.length; i++) { n for(let j = i + 1; j < arr.length; j++) { n
+    console.log(arr[i] + ", " + arr[j] ); O(1) } } } 7. The compute() function
+    goes through each number leading up to the param num and goes through the if
+    statements of the for() loop. It pushes the result of the if statement the
+    number applied too, into the result array. Then, after the function has
+    reached the param number and has gone through the if statements, it will
+    return the final result array. function compute(num) { let result = []; for
+    (let i = 1; i <= num; i++) { if (i === 1) { result.push(0); } else if (i ==
+    2) { result.push(1); } else { result.push(result[i - 2] + result[i - 3]); }
+    } return result; }
+  </body>
+</html>
